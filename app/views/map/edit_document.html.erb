@@ -1,0 +1,19 @@
+<% content_for :head do %>
+  <title>DocumentMap</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<% end %>
+<% if user_signed_in? and @document.user_id == current_user.id %>
+
+EDIT DOCUMENT <%= params[:id] %>
+<p>
+  USER
+</p>
+
+<% else %>
+  <%= link_to('VIEW', '/view_document/' + params[:id].to_s)  %>
+  <script>
+    window.location.href = "/view_document/" + <%= params[:id].to_s %>;
+  </script>
+<% end %>

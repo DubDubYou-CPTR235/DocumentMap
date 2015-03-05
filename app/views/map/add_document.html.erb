@@ -10,7 +10,7 @@ ADD DOCUMENT
 <%= form_for @document do |f| %>
   <p>
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, :required => true %>
   </p>
   <p>
     <%= f.label :description %><br>
@@ -18,25 +18,20 @@ ADD DOCUMENT
   </p>
   <p>
     <%= f.label :upload_date %><br>
-    <%= f.date_field :upload_date %>
+    <%= f.date_field :upload_date, :required => true %>
   </p>
   <p>
     <%= f.label :address %><br>
-    <%= f.text_field :address %>
+    <%= f.text_field :address, :required => true %>
   </p>
   <p>
     <%= f.label :upload %><br>
-    <%= f.file_field :upload %>
+    <%= f.file_field :upload, :required => true %>
   </p>
   <p>
-    <%= f.label :lat %><br>
-    <%= f.number_field :lat %>
-  </p>
-  <p>
-    <%= f.label :lng %><br>
-    <%= f.number_field :lng %>
-  </p>
-  <p>
-    <%= f.submit "Add" %>
+    <%= f.hidden_field :lat, :required => true %>
+    <%= f.hidden_field :lng, :required => true %>
+    <button type="button" onclick="add_document();">Add</button>
+    <span id="error"></span>
   </p>
 <% end %>

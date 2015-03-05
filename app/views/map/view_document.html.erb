@@ -6,3 +6,18 @@
 <% end %>
 
 VIEW DOCUMENT <%= params[:id] %>
+<p>
+<% if user_signed_in? and @document.user_id == current_user.id %>
+  <%= link_to('EDIT', '/edit_document/' + params[:id].to_s)  %>
+<% else %>
+<% end %>
+<p>Name:</p>
+<p><%= @document.name %></p>
+<p>Description:</p>
+<p><%= @document.description %></p>
+<p>Upload Date:</p>
+<p><%= @document.upload_date.to_date %></p>
+<p>Address:</p>
+<p><%= @document.address %></p>
+<p>Upload:</p>
+<p><%= @document.upload %></p>
