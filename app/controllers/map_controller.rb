@@ -5,5 +5,6 @@ class MapController < ApplicationController
   end
 
   def view_document
+    @document = Document.find(params[:id])
   end
 end
