@@ -7,9 +7,35 @@
 <% if user_signed_in? and @document.user_id == current_user.id %>
 
 EDIT DOCUMENT <%= params[:id] %>
-<p>
-  USER
-</p>
+
+<%= form_for @document do |f| %>
+  <p> 
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :required => true %>
+  </p>
+  <p> 
+    <%= f.label :description %><br>
+    <%= f.text_area :description, :rows => 10 %>
+  </p>
+  <p> 
+    <%= f.label :upload_date %><br>
+    <%= f.date_field :upload_date, :required => true %>
+  </p>
+  <p> 
+    <%= f.label :address %><br>
+    <%= f.text_field :address, :required => true %>
+  </p>
+  <p> 
+    <%= f.label :upload %><br>
+    <%= f.file_field :upload, :required => true %>
+  </p>
+  <p> 
+    <%= f.hidden_field :lat, :required => true %>
+    <%= f.hidden_field :lng, :required => true %>
+    <button type="button" onclick="add_document();">Update</button>
+    <span id="error"></span>
+  </p>
+<% end %>
 
 <% else %>
   <%= link_to('VIEW', '/view_document/' + params[:id].to_s)  %>

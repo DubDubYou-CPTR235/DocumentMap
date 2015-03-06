@@ -1,0 +1,14 @@
+<% content_for :head do %>
+  <title>DocumentMap</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<% end %>
+
+MY DOCUMENTS
+
+<% @documents.each do |document| %>
+<p>
+  <%= link_to(document.name, '/view_document/' + document.id.to_s)  %>
+</p>
+<% end %>
