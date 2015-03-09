@@ -45,4 +45,4 @@ end
 
 gem 'devise'
 
-gem 'paperclip'
+gem 'paperclip', '4.2.0'

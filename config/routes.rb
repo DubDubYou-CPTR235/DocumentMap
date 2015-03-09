@@ -17,6 +17,8 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
   get 'add_document', to: 'login_required#add_document', as: :add_document
   get 'view_document/:id', to: 'map#view_document', as: :view_document
+  get 'edit_document/:id', to: 'login_required#edit_document', as: :edit_document
+  get 'my_documents', to: 'login_required#my_documents', as: :my_documents
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

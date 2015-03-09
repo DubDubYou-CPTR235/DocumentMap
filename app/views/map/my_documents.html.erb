@@ -8,7 +8,7 @@
 MY DOCUMENTS
 
 <% @documents.each do |document| %>
-<p>
+<p class="my_doc">
   <%= link_to(document.name, '/view_document/' + document.id.to_s)  %>
 </p>
 <% end %>

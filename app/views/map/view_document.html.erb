@@ -24,4 +24,4 @@ VIEW DOCUMENT <%= params[:id] %>
 <p>Longitude:</p>
 <p><%= @document.lng %></p>
 <p>Upload:</p>
-<p><%= @document.upload %></p>
+<p><a href="<%= @document.upload %>"><%= @document.upload_file_name %></a></p>
