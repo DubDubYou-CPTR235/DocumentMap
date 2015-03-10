@@ -10,12 +10,16 @@
 
 <div class="header">
   <% if user_signed_in? %>
-    <%= link_to('Map', '/') %> |
-    <%= link_to('My Documents', '/my_documents') %> |
-    <%= link_to('Add Document', '/add_document') %> |
-    <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+    <ul>
+      <li><%= link_to('Map', '/') %></li>
+      <li><%= link_to('My Documents', '/my_documents') %></li>
+      <li><%= link_to('Add Document', '/add_document') %></li>
+      <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+    </ul>
   <% else %>
-    <%= link_to('Login', new_user_session_path)  %>
+    <ul>
+      <li><%= link_to('Login', new_user_session_path)  %></li>
+    </ul>
   <% end %>
 </div>
 <br>
