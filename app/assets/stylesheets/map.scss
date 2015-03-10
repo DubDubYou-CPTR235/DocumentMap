@@ -3,9 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
-  color: black;
+  
 }
-
+body {
+  background-image: url("http://fc07.deviantart.net/fs9/i/2006/064/7/5/Grey_of_Light_II__Real__Col__by_iAmFreeman.jpg");
+}
 .hide_this {
   display: none;
 }
@@ -16,10 +18,10 @@ html {
 
 #map-container {
   border-radius: 16px 16px;
-  border-color: #fff;
+  border-color: black;
   border-style: solid;
-  box-shadow: 2px 2px 10px #B1B1B1;
-  margin-top: 25px;
+  box-shadow: 2px 2px 10px #000033;
+  margin-top: 55px;
   border-width: 7px;
 }
 #map-canvas {
@@ -32,4 +34,46 @@ html {
   right: 10px;
   top: 10px;
   font-size: 11pt;
+  border-style: solid;
+  border-width: 1px;
+  background-image: url("http://fc07.deviantart.net/fs70/f/2010/118/6/8/renaitreflat_by_L_i_m_b_0.png");
+}
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: white;
+}
+
+.header a {
+  display: block;
+  width: 10em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+}
+
+.header a:hover {
+  color: black;
+}
+
+.header li {
+  display: inline;
+  float: left;
+}
+
+.map_text {
+  position: absolute;
+  left: 10px;
+  top: 45px;
+  background-image: url("http://orig11.deviantart.net/10de/f/2015/068/e/b/pad_by_forcefire95-d8l3wt8.png");
+  width:400px;
+  border-style: outset;
+  border-color: #303030;
+  color: white;
+  font-size: 18pt;
+  text-align: left;
+  
 }
