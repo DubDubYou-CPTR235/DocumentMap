@@ -6,7 +6,7 @@
 <% end %>
 <% if user_signed_in? and @document.user_id == current_user.id %>
 
-EDIT DOCUMENT <%= params[:id] %>
+<h3>EDIT DOCUMENT</h3> <%= params[:id] %>
 
 <%= form_for @document do |f| %>
   <p> 

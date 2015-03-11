@@ -6,6 +6,7 @@ html {
   
 }
 body {
+  padding-top: 60px;
   background-image: url("http://fc07.deviantart.net/fs9/i/2006/064/7/5/Grey_of_Light_II__Real__Col__by_iAmFreeman.jpg");
 }
 .hide_this {
@@ -55,7 +56,7 @@ body {
   color: white;
 }
 
-.header a:hover {
+a:hover {
   color: black;
 }
 
@@ -76,4 +77,39 @@ body {
   font-size: 18pt;
   text-align: left;
   
+}
+
+h3, h2  {
+  position: absolute;
+  left: 10px;
+  top: 45px;
+  background-image: url("http://orig11.deviantart.net/10de/f/2015/068/e/b/pad_by_forcefire95-d8l3wt8.png");
+  width:400px;
+  border-style: outset;
+  border-color: #303030;
+  color: white;
+  font-size: 18pt;
+  text-align: left;
+
+}
+
+
+p{
+  color: white;
+}
+
+
+a {
+  color: #B0B0B0;
+}
+
+
+.my_doc {
+  padding-left: 25px;
+  font-size: 16pt;
+}
+
+form {
+ padding-top: 40px; 
+ color: white;
 }

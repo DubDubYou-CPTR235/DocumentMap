@@ -5,10 +5,10 @@
   <%= csrf_meta_tags %>
 <% end %>
 
-VIEW DOCUMENT <%= params[:id] %>
+<h3>VIEW DOCUMENT</h3> <%= params[:id] %>
 <p>
 <% if user_signed_in? and @document.user_id == current_user.id %>
-  <%= link_to('EDIT', '/edit_document/' + params[:id].to_s)  %>
+ <%= link_to('EDIT', '/edit_document/' + params[:id].to_s)  %>
 <% else %>
 <% end %>
 <p>Name:</p>
