@@ -66,9 +66,9 @@ a:hover {
 }
 
 .map_text {
-  position: absolute;
+  
   left: 10px;
-  top: 45px;
+  
   background-image: url("http://orig11.deviantart.net/10de/f/2015/068/e/b/pad_by_forcefire95-d8l3wt8.png");
   width:400px;
   border-style: outset;
@@ -80,9 +80,9 @@ a:hover {
 }
 
 h3, h2  {
-  position: absolute;
+  
   left: 10px;
-  top: 45px;
+  margin-top: -16px;
   background-image: url("http://orig11.deviantart.net/10de/f/2015/068/e/b/pad_by_forcefire95-d8l3wt8.png");
   width:400px;
   border-style: outset;
@@ -101,6 +101,7 @@ p{
 
 a {
   color: #B0B0B0;
+  
 }
 
 
@@ -110,6 +111,7 @@ a {
 }
 
 form {
- padding-top: 40px; 
+ padding-top: 10px;
+ padding-left: 20px; 
  color: white;
 }
