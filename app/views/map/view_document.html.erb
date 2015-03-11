@@ -5,23 +5,23 @@
   <%= csrf_meta_tags %>
 <% end %>
 
-<h3>VIEW DOCUMENT</h3> <%= params[:id] %>
+<h3>VIEW DOCUMENT</h3>
 <p>
 <% if user_signed_in? and @document.user_id == current_user.id %>
  <%= link_to('EDIT', '/edit_document/' + params[:id].to_s)  %>
 <% else %>
 <% end %>
 <p>Name:</p>
-<p><%= @document.name %></p>
+<div class="data"><p><%= @document.name %></p></div>
 <p>Description:</p>
-<p><%= @document.description %></p>
+<div class="data"><p><%= @document.description %></p></div>
 <p>Upload Date:</p>
-<p><%= @document.upload_date.to_date %></p>
+<div class="data"><p><%= @document.upload_date.to_date %></p></div>
 <p>Address:</p>
-<p><%= @document.address %></p>
+<div class="data"><p><%= @document.address %></p></div>
 <p>Latitude:</p>
-<p><%= @document.lat %></p>
+<div class="data"><p><%= @document.lat %></p></div>
 <p>Longitude:</p>
-<p><%= @document.lng %></p>
+<div class="data"><p><%= @document.lng %></p></div>
 <p>Upload:</p>
-<p><a href="<%= @document.upload %>"><%= @document.upload_file_name %></a></p>
+<div class="data"><p><a href="<%= @document.upload %>"><%= @document.upload_file_name %></a></p></div>
